@@ -1,0 +1,148 @@
+.skill-menu {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 15vw;
+  top: 30%;
+  width: 31.2rem;
+}
+
+.skill-item {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 3.7rem;
+  justify-content: flex-end;
+  position: relative;
+  width: 50%;
+}
+
+.skill-title {
+  font-size: 1rem;
+  padding-right: 4.5rem;
+}
+
+.skill-item.activeSkill .skill-title {
+  font-size: 1.5rem;
+}
+
+.activeSkill {
+  border-radius: var(--radius-left);
+  cursor: default;
+}
+
+.skill-item.activeSkill:nth-child(1) {
+  background: linear-gradient(270deg, #ffffff00, var(--purple) 70%);
+}
+.skill-item.activeSkill:nth-child(2) {
+  background: linear-gradient(270deg, #ffffff00, var(--blue) 70%);
+}
+
+.skill-icon {
+  height: 5rem;
+  left: 8rem;
+  position: absolute;
+  top: 1.8rem;
+  width: 5rem;
+}
+
+.skill-sub-container-1 h3,
+.skill-sub-container-2 h3 {
+  position: relative;
+  margin: 0;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 15vw;
+  top: 50%;
+  transform: translateY(-25%);
+  width: 19rem;
+}
+
+.skill-sub-container-1,
+.skill-sub-container-2 {
+  display: flex;
+  gap: 2rem;
+  justify-content: right;
+}
+
+.level-container {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.level-point {
+  border-radius: 0.2rem;
+  height: 2rem;
+  width: 3rem;
+}
+
+.filled {
+  background: linear-gradient(180deg, #236473, #25afce, #7ce7ff);
+}
+.unfilled {
+  background: linear-gradient(180deg, #1c8298, #074654, #074654);
+}
+
+.skill-sub-container {
+  display: flex;
+  gap: 0.4rem;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1100px) {
+  .skill-item.activeSkill .skill-title {
+    font-size: 1rem;
+  }
+  .skill-icon {
+    display: none;
+  }
+  .level-point {
+    border-radius: 0.1rem;
+    height: 1rem;
+    width: 1.2rem;
+  }
+  .level-container {
+    gap: 0.15rem;
+  }
+  .skill-sub-container-1,
+  .skill-sub-container-2 {
+    gap: 0.5rem;
+  }
+  .skill-sub-container {
+    gap: 0.2rem;
+    margin-top: 2rem;
+  }
+  h1 {
+    font-size: 0.8rem;
+  }
+  h2,
+  h3,
+  p {
+    font-size: 0.7rem;
+  }
+  .skill-menu {
+    align-items: center;
+    flex-direction: column;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+  }
+  .skill-item {
+    height: 2rem;
+    width: 12em;
+  }
+}
+@media (max-width: 700px) {
+  .menu {
+    left: 50%;
+    top: 30%;
+    transform: translateY(-50%);
+    width: 10rem;
+  }
+}
